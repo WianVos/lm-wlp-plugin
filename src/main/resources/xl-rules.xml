@@ -1,0 +1,30 @@
+<!--
+THIS CODE AND INFORMATION ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR 
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS 
+FOR A PARTICULAR PURPOSE. THIS CODE AND INFORMATION ARE NOT SUPPORTED BY XEBIALABS.
+-->
+<?xml version="1.0"?>
+<rules xmlns="http://www.xebialabs.com/xl-deploy/xl-rules">
+
+
+    <!-- ==================================== importable xml Artifacts ====================================-->
+
+    <rule name="lmwlp.IncludedXml.CREATE_MODIFY" scope="deployed">
+        <conditions>
+            <type>lmwlp.IncludedXml</type>
+            <operation>CREATE</operation>
+            <operation>MODIFY</operation>
+        </conditions>
+        <planning-script-path>scripts/configuration/plan-config-xml-deploy.py</planning-script-path>
+    </rule>
+    <rule name="lmwlp.IncludedXml.DESTROY" scope="deployed">
+        <conditions>
+            <type>lmwlp.IncludedXml</type>
+            <operation>DESTROY</operation>
+            <operation>MODIFY</operation>
+        </conditions>
+        <planning-script-path>scripts/configuration/plan-config-xml-undeploy.py</planning-script-path>
+    </rule>
+
+
+</rules>

@@ -1,0 +1,25 @@
+<!-- 
+THIS CODE AND INFORMATION ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR 
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS 
+FOR A PARTICULAR PURPOSE. THIS CODE AND INFORMATION ARE NOT SUPPORTED BY XEBIALABS.
+-->
+<synthetic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.xebialabs.com/deployit/synthetic" xsi:schemaLocation="http://www.xebialabs.com/deployit/synthetic synthetic.xsd">
+
+    <!-- ==================================== xml_import ==================================== -->
+    <type type="lmwlp.IncludedXml" extends="udm.BaseDeployedArtifact" deployable-type="lmwlp.includedXmlSpec" container-type="wlp.Server" description="External xml-file included in Liberty server.xml">
+        <generate-deployable type="lmwlp.includedXmlSpec" extends="generic.File" description="Was LP importable xml file" />
+        <!-- template options -->
+        <property name="optional" label="config file is optional" default="true" kind="boolean" description="server will start even if this xml file is not present" />
+        <property name="rank" kind="integer" required ="true" default="0" label="include ordering rank" description="the rank this file has in the include file order"/>
+        <!-- hidden properties -->
+        <property name="location" kind="string" hidden="true" required="false" />
+        <!-- xml settings: these will be used to formulate the line to be added to the server xml -->
+        <property name="propertyMappingElementName" hidden="true" default="include" />
+        <property name="propertyMapping" hidden="true" kind="map_string_string" default="id:name,location:,optional:" />
+    </type>
+
+
+
+</synthetic>
+
+
