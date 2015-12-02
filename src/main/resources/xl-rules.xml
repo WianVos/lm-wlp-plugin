@@ -1,8 +1,3 @@
-<!--
-THIS CODE AND INFORMATION ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR 
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS 
-FOR A PARTICULAR PURPOSE. THIS CODE AND INFORMATION ARE NOT SUPPORTED BY XEBIALABS.
--->
 <?xml version="1.0"?>
 <rules xmlns="http://www.xebialabs.com/xl-deploy/xl-rules">
 
@@ -15,7 +10,7 @@ FOR A PARTICULAR PURPOSE. THIS CODE AND INFORMATION ARE NOT SUPPORTED BY XEBIALA
             <operation>CREATE</operation>
             <operation>MODIFY</operation>
         </conditions>
-        <planning-script-path>scripts/configuration/plan-config-xml-deploy.py</planning-script-path>
+        <planning-script-path>lmwlp/scripts/configuration/plan-config-xml-deploy.py</planning-script-path>
     </rule>
     <rule name="lmwlp.IncludedXml.DESTROY" scope="deployed">
         <conditions>
@@ -23,8 +18,10 @@ FOR A PARTICULAR PURPOSE. THIS CODE AND INFORMATION ARE NOT SUPPORTED BY XEBIALA
             <operation>DESTROY</operation>
             <operation>MODIFY</operation>
         </conditions>
-        <planning-script-path>scripts/configuration/plan-config-xml-undeploy.py</planning-script-path>
+        <planning-script-path>lmwlp/scripts/configuration/plan-config-xml-undeploy.py</planning-script-path>
     </rule>
-
+    <rule name="wlp.Configuration.REBOOT" scope="plan">
+        <planning-script-path>lmwlp/scripts/container/plan-container-reboot.py</planning-script-path>
+    </rule>
 
 </rules>
