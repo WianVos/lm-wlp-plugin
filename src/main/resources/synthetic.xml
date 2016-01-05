@@ -28,7 +28,6 @@
 
     <type type="lmwlp.configFile" extends="udm.BaseDeployedArtifact" deployable-type="lmwlp.configFileSpec" container-type="wlp.Server" description="websphere liberty profile config file">
         <generate-deployable type="lmwlp.configFileSpec" extends="generic.File" description="Was LP importable xml file" />
-        <property name="targetPath" kind="string" default="${deployed.container.serverConfigDir}" />
         <property name="targetPathShared" kind="string" default="True" />
     </type>
 

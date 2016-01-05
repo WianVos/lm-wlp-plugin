@@ -21,6 +21,23 @@
         <planning-script-path>lmwlp/scripts/configuration/plan-config-xml-undeploy.py</planning-script-path>
     </rule>
 
+    <rule name="lmwlp.configFile.CREATE_MODIFY" scope="deployed">
+        <conditions>
+            <type>lmwlp.configFile</type>
+            <operation>CREATE</operation>
+            <operation>MODIFY</operation>
+        </conditions>
+        <planning-script-path>lmwlp/scripts/configuration/plan-config-file-deploy.py</planning-script-path>
+    </rule>
+    <rule name="lmwlp.configFile.DESTROY" scope="deployed">
+        <conditions>
+            <type>lmwlp.configFile</type>
+            <operation>DESTROY</operation>
+            <operation>MODIFY</operation>
+        </conditions>
+        <planning-script-path>lmwlp/scripts/configuration/plan-config-file-undeploy.py</planning-script-path>
+    </rule>
+
     <!-- unpacking them ears bro -->
     <rule name="lmwlp.EnterpriseApplication.CREATE_MODIFY" scope="deployed">
         <conditions>
