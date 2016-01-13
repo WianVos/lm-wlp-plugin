@@ -1,3 +1,13 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'co.riiid:gradle-github-plugin:0.3.1'
+    }
+}
+
 def getVersionName = { ->
     def stdout = new ByteArrayOutputStream()
     exec {
@@ -7,8 +17,20 @@ def getVersionName = { ->
     return stdout.toString().trim()
 }
 
-
 version=getVersionName()
 
 apply plugin: 'java'
 apply plugin: 'idea'
+apply plugin: 'co.riiid.gradle'
+
+github {
+    owner = 'wianvos'
+    repo = 'lm-wlp-plugin'
+    token = '627afd2a35e8c73552fcb394900a2479e81d5ac9'
+    tagName = getVersionName()
+    targetCommitish = 'master'
+    name = getVersionName()
+    assets = [
+            'build/libs/lm-wlp-plugin-$version.jar'
+    ]
+}
