@@ -16,7 +16,6 @@
         <conditions>
             <type>lmwlp.IncludedXml</type>
             <operation>DESTROY</operation>
-            <operation>MODIFY</operation>
         </conditions>
         <planning-script-path>lmwlp/scripts/configuration/plan-config-xml-undeploy.py</planning-script-path>
     </rule>
@@ -33,7 +32,6 @@
         <conditions>
             <type>lmwlp.configFile</type>
             <operation>DESTROY</operation>
-            <operation>MODIFY</operation>
         </conditions>
         <planning-script-path>lmwlp/scripts/configuration/plan-config-file-undeploy.py</planning-script-path>
     </rule>
