@@ -23,7 +23,7 @@ apply plugin: 'net.saliman.properties'
 apply plugin: 'java'
 apply plugin: 'idea'
 apply plugin: 'co.riiid.gradle'
-
+println 'build/libs/lm-wlp-plugin-${getVersionName}.jar'
 github {
     owner = 'wianvos'
     repo = 'lm-wlp-plugin'
@@ -32,6 +32,6 @@ github {
     targetCommitish = 'master'
     name = getVersionName()
     assets = [
-            'build/libs/lm-wlp-plugin-$version.jar'
+            "build/libs/lm-wlp-plugin-"+getVersionName()+".jar"
     ]
 }
