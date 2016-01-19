@@ -5,6 +5,8 @@ from com.xebialabs.deployit.plugin.api.deployment.specification import Operation
 from com.xebialabs.deployit.plugin.api.deployment.planning import DefaultOrders
 
 
+
+
 deployed.location = "%s/%s" % (Paths.get_server_config_dir(deployed.container),  deployed.name)
 
 context.addStepWithCheckpoint(steps.upload(

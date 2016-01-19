@@ -4,14 +4,21 @@
 
     <!-- ==================================== importable xml Artifacts ====================================-->
 
-    <rule name="lmwlp.IncludedXml.CREATE_MODIFY" scope="deployed">
+    <rule name="lmwlp.IncludedXml.CREATE" scope="deployed">
         <conditions>
             <type>lmwlp.IncludedXml</type>
             <operation>CREATE</operation>
-            <operation>MODIFY</operation>
         </conditions>
         <planning-script-path>lmwlp/scripts/configuration/plan-config-xml-deploy.py</planning-script-path>
     </rule>
+    <rule name="lmwlp.IncludedXml.MODIFY" scope="deployed">
+        <conditions>
+            <type>lmwlp.IncludedXml</type>
+            <operation>MODIFY</operation>
+        </conditions>
+        <planning-script-path>lmwlp/scripts/configuration/plan-config-xml-mod.py</planning-script-path>
+    </rule>
+
     <rule name="lmwlp.IncludedXml.DESTROY" scope="deployed">
         <conditions>
             <type>lmwlp.IncludedXml</type>
