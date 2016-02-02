@@ -24,6 +24,7 @@
 
     <type-modification type="wlp.EnterpriseApplication">
         <property name="unpackZipFile" category="Liberty Mutual" kind="boolean" default="true" description="should the earfile be unzipped in the target directory? this options is to counter a bug in was lp" />
+        <property name="notifyArtifactory" category="Liberty Mutual" kind="boolean" default="true" description="upon deployment set a property on the artifactory object telling people not to remove the object"/>
     </type-modification>
 
     <type type="lmwlp.configFile" extends="udm.BaseDeployedArtifact" deployable-type="lmwlp.configFileSpec" container-type="wlp.Server" description="websphere liberty profile config file">

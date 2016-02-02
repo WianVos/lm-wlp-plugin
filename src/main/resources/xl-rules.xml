@@ -60,6 +60,21 @@
         </conditions>
         <planning-script-path>lmwlp/scripts/application/plan-unpack-ear-destroy.py</planning-script-path>
     </rule>
+    <rule name="lmwlp.EnterpriseApplication.CREATE.artifactory_Callback" scope="deployed">
+        <conditions>
+            <type>wlp.EnterpriseApplication</type>
+            <operation>CREATE</operation>
+        </conditions>
+        <planning-script-path>lmwlp/scripts/application/artifactory_callback.py</planning-script-path>
+    </rule>
+    <rule name="lmwlp.EnterpriseApplication.Destroy.artifactory_Callback" scope="deployed">
+        <conditions>
+            <type>wlp.EnterpriseApplication</type>
+            <operation>CREATE</operation>
+        </conditions>
+        <planning-script-path>lmwlp/scripts/application/artifactory_callback_destroy.py</planning-script-path>
+    </rule>
+
     <!-- done unpacking them ears bro -->
 
     <rule name="wlp.Configuration.REBOOT" scope="plan">
