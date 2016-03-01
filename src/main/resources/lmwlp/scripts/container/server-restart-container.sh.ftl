@@ -1,3 +1,4 @@
+# this script takes care of restarting the was lp container on a linux level
 ${container.wlpInstallDir}/bin/server stop ${container.name}
 rc=$?
 
