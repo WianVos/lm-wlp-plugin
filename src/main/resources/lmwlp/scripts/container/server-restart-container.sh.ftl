@@ -16,7 +16,7 @@ esac
 
 
 
-${container.wlpInstallDir}/bin/server start ${container.name}
+${container.wlpInstallDir}/bin/server start ${container.name} --clean
 rc=$?
 
 case $rc in
